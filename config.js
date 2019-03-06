@@ -1,6 +1,6 @@
 
 let config = {
-  url: 'https://www.medium.com/'
+  url: 'https://medium.com/'
 }
 
 module.exports = config
