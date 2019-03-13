@@ -10,8 +10,14 @@ const url = require('url')
 const validUrl = require('valid-url')
 const write = require('./data/write')
 const config = require('./config')
+const http = require('http')
+const https = require('https')
+
 let hasBeenVisited = new Set([])
 let toCrawlURL = []
+
+http.globalAgent.maxSockets = 5
+https.globalAgent.maxSockets = 5
 
 app.get('/', (req, res) => {
   res.send('<h1>App is now working</h1>')
